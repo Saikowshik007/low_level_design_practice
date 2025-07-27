@@ -55,7 +55,7 @@ class ParkingLot:
         return None
 
     def get_available_sizes(self, size):
-        size_hierarchy = {Size.SMALL : [Size.SMALL, Size.MEDIUM, Size.LARGE], Size.MEDIUM : [Size.MEDIUM, Size.LARGE], Size.LARGE : [Size.MEDIUM, Size.LARGE]}
+        size_hierarchy = {Size.SMALL : [Size.SMALL, Size.MEDIUM, Size.LARGE], Size.MEDIUM : [Size.MEDIUM, Size.LARGE], Size.LARGE : [Size.LARGE]}
         if size not in size_hierarchy:
             raise ValueError("size should be of small, medium, large")
         return size_hierarchy[size]

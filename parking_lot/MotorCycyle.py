@@ -1,4 +1,4 @@
-from parking_lot.SIze import Size
+from parking_lot.Size import Size
 from parking_lot.Vehicle import Vehicle
 import uuid
 
