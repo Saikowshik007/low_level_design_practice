@@ -4,5 +4,4 @@ class Vehicle:
     size = None
     parking_spot = None
     def __init__(self,size):
-        self.size = size
-        self.id = uuid.uuid1()
+        pass

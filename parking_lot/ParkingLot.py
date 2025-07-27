@@ -2,6 +2,7 @@ from collections import  defaultdict
 from threading import Lock, RLock
 import time
 
+from parking_lot.Size import Size
 from parking_lot.ParkingSpot import ParkingSpot
 
 
@@ -54,7 +55,7 @@ class ParkingLot:
         return None
 
     def get_available_sizes(self, size):
-        size_hierarchy = {"small" : ["small", "medium", "large"], "medium" : ["medium", "large"], "large" : ["large"]}
+        size_hierarchy = {Size.SMALL : [Size.SMALL, Size.MEDIUM, Size.LARGE], Size.MEDIUM : [Size.MEDIUM, Size.LARGE], Size.LARGE : [Size.MEDIUM, Size.LARGE]}
         if size not in size_hierarchy:
             raise ValueError("size should be of small, medium, large")
         return size_hierarchy[size]
